@@ -3,7 +3,26 @@ package TimesTable;
 import java.util.Scanner;
 
 public class TimeTables {
+    public static int[] caculate(int times) {
+        int[] result = new int[9];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = times * (i + 1);
+        }
+        return result;
+    }
+
+    public static void print(int[] result) {
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i]);
+        }
+    }
+
     public static void main(String[] args) {
+        for (int i = 2; i < 10; i++) {
+            int[] result = caculate(i);
+            print(result);
+        }
+
         // 2단
 //        System.out.println(2 * 1);
 //        System.out.println(2 * 2);
@@ -85,24 +104,25 @@ public class TimeTables {
 //            System.out.println("2 이상 9 이하의 숫자를 입력해주세요.");
 //        }
 
-        int[] result = new int[9];
-        
-        for (int i = 0; i < result.length; i++) {
-            result[i] = 2 * (i + 1); // 2단 배열
-        }
+//        int[] result = new int[9];
+//
+//        for (int i = 0; i < result.length; i++) {
+//            result[i] = 2 * (i + 1); // 2단 배열
+//        }
+//
+//        for (int i = 0; i < result.length; i++) {
+//            System.out.println(result[i]);
+//        }
+//
+//        result = new int[9];
+//
+//        for (int i = 0; i < result.length; i++) {
+//            result[i] = 3 * (i + 1); // 3단 배열
+//        }
+//
+//        for (int i = 0; i < result.length; i++) {
+//            System.out.println(result[i]);
+//        }
 
-        for (int i = 0; i < result.length; i++) {
-            System.out.println(result[i]);
-        }
-
-        result = new int[9];
-
-        for (int i = 0; i < result.length; i++) {
-            result[i] = 3 * (i + 1); // 3단 배열
-        }
-
-        for (int i = 0; i < result.length; i++) {
-            System.out.println(result[i]);
-        }
     }
 }
