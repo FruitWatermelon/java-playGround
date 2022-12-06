@@ -74,15 +74,35 @@ public class TimeTables {
 //        }
 
         // 8단
-        System.out.println("구현하고 싶은 단은 ? :");
-        Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        if (number >= 2 && number <= 9) {
-            for (int i = 1; i < 10; i++) {
-                System.out.println(number * i);
-            }
-        } else {
-            System.out.println("2 이상 9 이하의 숫자를 입력해주세요.");
+//        System.out.println("구현하고 싶은 단은 ? :");
+//        Scanner scanner = new Scanner(System.in);
+//        int number = scanner.nextInt();
+//        if (number >= 2 && number <= 9) {
+//            for (int i = 1; i < 10; i++) {
+//                System.out.println(number * i);
+//            }
+//        } else {
+//            System.out.println("2 이상 9 이하의 숫자를 입력해주세요.");
+//        }
+
+        int[] result = new int[9];
+        
+        for (int i = 0; i < result.length; i++) {
+            result[i] = 2 * (i + 1); // 2단 배열
+        }
+
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i]);
+        }
+
+        result = new int[9];
+
+        for (int i = 0; i < result.length; i++) {
+            result[i] = 3 * (i + 1); // 3단 배열
+        }
+
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(result[i]);
         }
     }
 }
