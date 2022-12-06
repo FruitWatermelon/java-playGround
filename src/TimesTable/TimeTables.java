@@ -62,15 +62,27 @@ public class TimeTables {
 //        System.out.println(number * 9);
 
         // 6단
-        int i = 1;
-        while(i<10){
-            System.out.println(6 * i);
-            i = i+1;
-        }
+//        int i = 1;
+//        while(i<10){
+//            System.out.println(6 * i);
+//            i = i+1;
+//        }
+//
+//        // 7단
+//        for(int j=1; j<10; j++){
+//            System.out.println(7 * j);
+//        }
 
-        // 7단
-        for(int j=1; j<10; j++){
-            System.out.println(7 * j);
+        // 8단
+        System.out.println("구현하고 싶은 단은 ? :");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        if (number >= 2 && number <= 9) {
+            for (int i = 1; i < 10; i++) {
+                System.out.println(number * i);
+            }
+        } else {
+            System.out.println("2 이상 9 이하의 숫자를 입력해주세요.");
         }
     }
 }
