@@ -8,12 +8,17 @@ public class Calendar {
     public static void main(String[] args) {
 
         Calendar cal = new Calendar();
-        // 입력 받은 달의 최대 일수 구하기 Ex) 2 입력시 28 출력
         Scanner scanner = new Scanner(System.in);
-        System.out.println("달을 입력하세요.");
-        int month = scanner.nextInt();
 
-        System.out.printf("%d월은 %d일까지 있습니다.", month, cal.getMaxDaysOfMonth(month));
+        System.out.println("반복횟수를 입력하세요.");
+        int count = scanner.nextInt();
+
+        for(int i=0; i<count; i++) {
+            System.out.println("달을 입력하세요.");
+            int month = scanner.nextInt();
+            System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.getMaxDaysOfMonth(month));
+        }
+
 //        cal.printSampleCalendar();
     }
 
