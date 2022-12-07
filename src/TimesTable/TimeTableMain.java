@@ -3,6 +3,7 @@ package TimesTable;
 import java.util.Scanner;
 
 public class TimeTableMain {
+
     public static void main(String[] args) {
 
         System.out.println("출력하실 구구단의 값을 입력하세요 ");
@@ -10,10 +11,10 @@ public class TimeTableMain {
         Scanner scanner = new Scanner(System.in);
         String inputValue = scanner.nextLine();
         timeTable(inputValue);
-
     }
 
     public static void timeTable(String inputValue) {
+
         String[] splitedValue = inputValue.split(",");
 
         int first = Integer.parseInt(splitedValue[0]);
@@ -23,7 +24,7 @@ public class TimeTableMain {
             for (int j = 1; j <= second; j++) {
                 System.out.println(i + " * " + j + " = " + i * j);
             }
-
         }
+
     }
 }
