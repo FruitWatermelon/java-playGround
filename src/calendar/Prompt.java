@@ -91,28 +91,25 @@ public class Prompt {
         System.out.println("[일정 검색]");
         System.out.println("날짜를 입력해 주세요. (yyyy-MM-dd)");
         String date = s.next();
-        String plan = "";
-        try {
-            plan = c.searchPlan(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
+        PlanItem plan;
+        plan = c.searchPlan(date);
+        if (plan != null) {
+            System.out.println(plan.detail);
+        } else {
+            System.out.println("일정이 없습니다.");
         }
-        System.out.println(plan);
+
     }
 
     private void cmdRegister(Scanner s, Calendar c) throws ParseException {
         System.out.println("[새 일정 등록]");
         System.out.println("날짜를 입력해 주세요. (yyyy-MM-dd)");
         String date = s.next();
-        String text = "";
+
         System.out.println("일정을 입력해 주세요.");
-        while (true) {
-            String word = s.next();
-            text += word + " ";
-            if (word.endsWith(";")) {
-                break;
-            }
-        }
+        s.nextLine();
+        String text = s.nextLine();
+
         c.registerPlan(date, text);
     }
 }
